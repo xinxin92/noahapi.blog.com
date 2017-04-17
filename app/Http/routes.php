@@ -19,7 +19,9 @@ Route::group([
     'namespace' => 'Test',
 //    'middleware' => ['checkLogin', 'recordLog'],
 ], function () {
-    Route::get('/db', 'TestDb@index');
+    Route::get('/database/index', 'Database@index');
+    Route::get('/alipay/pay', 'Alipay@pay');
+    Route::get('/alipay/query', 'Alipay@query');
 //    Route::post('/db', 'TestDb@index');
 //    Route::match(['get','post'],'/db', 'TestDb@index');
 });
