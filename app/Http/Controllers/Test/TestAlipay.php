@@ -2,7 +2,7 @@
 //支付宝支付测试
 namespace App\Http\Controllers\Test;
 
-class Alipay extends Base
+class TestAlipay extends TestBase
 {
     //支付
     public function pay()
