@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Article;
+
+use App\Models\BaseModel;
 
 class ArticleContent extends BaseModel
 {

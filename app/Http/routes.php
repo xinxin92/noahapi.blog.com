@@ -19,9 +19,9 @@ Route::group([
     'namespace' => 'Test',
 //    'middleware' => ['checkLogin', 'recordLog'],
 ], function () {
-    Route::get('/database/index', 'TestDatabase@index');
-    Route::get('/alipay/pay', 'TestAlipay@pay');
-    Route::get('/alipay/query', 'TestAlipay@query');
+    Route::match(['get', 'post'],'/database/index', 'TestDatabase@index');
+    Route::match(['get', 'post'],'/alipay/pay', 'TestAlipay@pay');
+    Route::match(['get', 'post'],'/alipay/query', 'TestAlipay@query');
 //    Route::post('/db', 'TestDb@index');
 //    Route::match(['get','post'],'/db', 'TestDb@index');
 });
