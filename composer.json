@@ -18,7 +18,8 @@
     "autoload": {
         "classmap": [
             "database",
-            "vendor/alipay-sdk-PHP-20170411150151"
+            "vendor/alipay-sdk-PHP-20170411150151",
+            "vendor/PHPExcel-1.8"
         ],
         "psr-4": {
             "App\\": "app/"

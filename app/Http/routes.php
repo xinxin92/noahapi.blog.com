@@ -22,6 +22,8 @@ Route::group([
     Route::match(['get', 'post'],'/database/index', 'TestDatabase@index');
     Route::match(['get', 'post'],'/alipay/pay', 'TestAlipay@pay');
     Route::match(['get', 'post'],'/alipay/query', 'TestAlipay@query');
+    Route::match(['get', 'post'],'/excel/export', 'TestExcel@export');
+    Route::match(['get', 'post'],'/excel/import', 'TestExcel@import');
 //    Route::post('/db', 'TestDb@index');
 //    Route::match(['get','post'],'/db', 'TestDb@index');
 });
