@@ -1,19 +1,10 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Routes File
-|--------------------------------------------------------------------------
-|
-| Here is where you will register all of the routes in an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+//测试
 Route::group([
     'prefix' => 'test',
     'namespace' => 'Test',
@@ -27,6 +18,28 @@ Route::group([
 //    Route::post('/db', 'TestDb@index');
 //    Route::match(['get','post'],'/db', 'TestDb@index');
 });
+
+//基础模块
+Route::group([
+    'prefix' => 'home',
+    'namespace' => 'Home',
+], function () {
+    //菜单
+    Route::match(['get', 'post'],'/menu', 'HomeMenu@index');
+    //登录用户的信息
+    Route::match(['get', 'post'],'/master', 'HomeMaster@index');
+});
+
+//内容模块
+Route::group([
+    'prefix' => 'content',
+    'namespace' => 'Content',
+], function () {
+    //内容列表
+    Route::match(['get', 'post'],'/list', 'ContentList@index');
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

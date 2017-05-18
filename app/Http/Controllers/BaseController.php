@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Request;
 class BaseController extends Controller
 {
     protected $request;
+    protected $master;
 
     public function __construct(){
         $this->request = Request::capture();
@@ -25,5 +26,10 @@ class BaseController extends Controller
                 $this->request->merge($rawJson);
             }
         }
+        $this->master = [
+            'master_id' => 1,
+            'master_name' => 'yuxinwei',
+            'real_name' => '尉鑫伟',
+        ];
     }
 }

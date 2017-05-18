@@ -79,4 +79,31 @@ class Common {
         return $str;
     }
 
+    //获取文件后缀名（处理了附带随机参数的特殊情况）
+    public static function getFileType($file){
+        $params_str = strrchr($file, '?');
+        if ($params_str) {
+            $file = str_replace($params_str,'',$file);
+        }
+        $file_type = strtolower(substr(strrchr($file, '.'), 1));
+        return $file_type;
+    }
+
+    //处理文本两端的空白及不可见字符
+    public static function delStrBothBlank($str = '', $saveEnterWrap=false){
+        if (!$str) {
+            return $str;
+        }
+        if ($saveEnterWrap) {
+            //中文空格、中文制表符、英文空格、英文制表符
+            $str = preg_replace('/^(\xc2\xa0|\xe3\x80\x80|\x20|\t)+/', '', $str);
+            $str = preg_replace('/(\xc2\xa0|\xe3\x80\x80|\x20|\t)+$/', '', $str);
+        } else {
+            //中文空格、中文制表符、\s(换页符、英文制表符、英文垂直制表符、回车符、换行符)
+            $str = preg_replace('/^(\xc2\xa0|\xe3\x80\x80|\s)+/', '', $str);
+            $str = preg_replace('/(\xc2\xa0|\xe3\x80\x80|\s)+$/', '', $str);
+        }
+        return html_entity_decode($str);
+    }
+
 }
