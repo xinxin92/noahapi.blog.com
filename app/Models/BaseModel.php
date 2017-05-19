@@ -35,7 +35,9 @@ class BaseModel extends Model
         } else {
             $query = $this;
         }
-        $query = $this->createJoin($query, $joins);
+        if ($joins) {
+            $query = $this->createJoin($query, $joins);
+        }
         $query = $this->createWhere($query, $where, $orderBy, $groupBy);
         return $query;
     }

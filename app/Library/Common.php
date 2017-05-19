@@ -53,6 +53,74 @@ class Common {
         return $pageMsg;
     }
 
+    //格式化数据之多条记录(添加序号、替换为指定值、限定长度)
+    public static function formatList($lists = [], $condition = [], $get_index = true, $index = 1)
+    {
+        if(!$lists || !$condition){
+            return $lists;
+        }
+        if (!is_array($lists)) {
+            foreach ($lists as $list) {
+                //添加序号
+                if ($get_index) {
+                    $list->index = $index++;
+                }
+                foreach ($condition as $k => $v) {
+                    //替换为设定值
+                    if (!isset($list->$k)) {
+                        if (isset($v['isNull'])) {
+                            $list->$k = $v['isNull'];
+                        }
+                    } else {
+                        if (isset($v[$list->$k])) {
+                            $list->$k = $v[$list->$k];
+                        }
+                    }
+                    //限定长度
+                    if (isset($v['lengthLimit']) && isset($list->$k)) {
+                        $newk = $k . "_short";
+                        if (mb_strlen($list->$k) > $v['lengthLimit'] && $v['lengthLimit']) {
+                            $list->$newk = mb_substr($list->$k, 0, $v['lengthLimit'], 'utf-8') . '...';
+                        } else {
+                            $list->$newk = $list->$k;
+                        }
+                    }
+                }
+            }
+        } else {
+            for ($i=0;$i<count($lists);$i++) {
+                $list = $lists[$i];
+                //添加序号
+                if ($get_index) {
+                    $list['index'] = $index++;
+                }
+                foreach ($condition as $k => $v) {
+                    //替换为设定值
+                    if (!isset($list[$k])) {
+                        if (isset($v['isNull'])) {
+                            $list[$k] = $v['isNull'];
+                        }
+                    } else {
+                        if (isset($v[$list[$k]])) {
+                            $list[$k] = $v[$list[$k]];
+                        }
+                    }
+                    //限定长度
+                    if (isset($v['lengthLimit']) && isset($list[$k])) {
+                        $newk = $k . "_short";
+                        if (mb_strlen($list[$k]) > $v['lengthLimit'] && $v['lengthLimit']) {
+                            $list[$newk] = mb_substr($list[$k], 0, $v['lengthLimit'], 'utf-8') . '...';
+                        } else {
+                            $list[$newk] = $list[$k];
+                        }
+                    }
+                }
+                $lists[$i] = $list;
+            }
+        }
+        return $lists;
+    }
+
     //获取唯一订单号(32位)
     public static function createOrderNumber($params  =[]) {
         $microsecond = microtime(true) * 10000;  //获取微妙级当前时间戳

@@ -1,7 +1,10 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group([
+    'namespace' => 'Home',
+], function () {
+    //菜单
+    Route::match(['get', 'post'],'/', 'HomeMenu@index');
 });
 
 //测试
@@ -30,13 +33,17 @@ Route::group([
     Route::match(['get', 'post'],'/master', 'HomeMaster@index');
 });
 
-//内容模块
+//文章模块
 Route::group([
-    'prefix' => 'content',
-    'namespace' => 'Content',
+    'prefix' => 'article',
+    'namespace' => 'Article',
 ], function () {
-    //内容列表
-    Route::match(['get', 'post'],'/list', 'ContentList@index');
+    //文章列表
+    Route::match(['get', 'post'],'/list', 'ArticleList@index');
+    Route::match(['get', 'post'],'/delete', 'ArticleDelete@index');
+    Route::match(['get', 'post'],'/audit', 'ArticleAudit@index');
+    Route::match(['get', 'post'],'/add', 'ArticleAdd@index');
+    Route::match(['get', 'post'],'/edit', 'ArticleEdit@index');
 });
 
 
