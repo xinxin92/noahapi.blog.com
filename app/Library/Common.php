@@ -121,8 +121,8 @@ class Common {
         return $lists;
     }
 
-    //获取唯一订单号(32位)
-    public static function createOrderNumber($params  =[]) {
+    //获取16位或32位唯一值（订单号、文件名等用）
+    public static function getUniqueValue($params =[], $raw = false) {
         $microsecond = microtime(true) * 10000;  //获取微妙级当前时间戳
         $randomStr = str_pad(rand(0, 100000), 6, 0, STR_PAD_LEFT);  //取6位随机数，不足为以0填补
         $uniqueValue = $microsecond . $randomStr;
@@ -131,7 +131,7 @@ class Common {
                 $uniqueValue = $uniqueValue.$param;
             }
         }
-        return md5($uniqueValue);
+        return md5($uniqueValue, $raw);
     }
 
     // 过滤掉emoji表情

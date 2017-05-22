@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('home.layout')
 @section('pagecss')
     <link rel="stylesheet" href="/assets/plugins/select2/select2.min.css">
 @endsection
@@ -48,7 +48,7 @@
                                 <option value="">请选择类型</option>
                                 <option value="1">标题</option>
                                 <option value="2">图片</option>
-                                <option value="3">正文</option>
+                                <option value="3">文字</option>
                             </select>
                         </td>
                         <td>&nbsp;</td>
@@ -58,69 +58,69 @@
 
             <div class="box-body table-responsive">
                 <table class="table table-hover table-bordered table-striped">
-                    <tr class="success">
-                        <th align="right" width="20%" class="text-center">话题标签<span class="text-red">*</span>:</th>
-                        <td width="80%">
-                            @foreach($opTags as $tag)
-                                <input type="checkbox" name="tag[]" value="{{$tag['id']}}"  />{{$tag['tag_content']}}
-                            @endforeach
-                        </td>
-                    </tr>
-                    <tr class="success">
-                        <th align="right" width="20%" class="text-center">品牌车系车型:</th>
-                        <td width="80%">
-                            <select style="width: 150px;" name="brandId" class="select2" id="brandId">
-                                <option value="">请选择品牌</option>
-                                @foreach($brandList as $val)
-                                    <option value="{{$val['brandid']}}">{{$val['brandname']}}</option>
-                                @endforeach
-                            </select>
-                            <select style="width: 150px;" name="seriesId" class="select2" id="seriesId">
-                                <option value="">请选择车系</option>
-                            </select>
-                            <select style="width: 300px;" name="modeId" class="select2" id="modeId">
-                                <option value="">请选择车型</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr class="success">
-                        <th align="right" width="20%" class="text-center">请选择机器人性别<span class="text-red">*</span>:</th>
-                        <td width="80%">
-                            <div class="form-group">
-                                <div class="col-sm-10">
-                                    <div>
-                                        <div style="float: left;">
-                                            <label>选择机器人种类：</label>
-                                            <input type="hidden" class="form-control" id="user_type" name='user_type' value="1">
-                                            <button type="button" class="btn btn-primary category">普通</button>
-                                            <button type="button" class="btn category">大V机器人</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"  ></div>
-                            <div class="form-group profile">
-                                <div class="col-sm-10">
-                                    <div>
-                                        <div style="float: left;">
-                                            <input type="radio" name="gender" value="1" checked data-num="{{$robotNum['male']}}" >&nbsp;男（共{{$robotNum['male']}}人）
-                                            <input type="radio" name="gender" value="2" data-num="{{$robotNum['female']}}">&nbsp;女（共{{$robotNum['female']}}人）
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group profile" style="display:none">
-                                <div class="col-sm-10">
-                                    <div>
-                                        <div style="float: left;">
-                                            <input type="hidden" value="" name="v_userid" id="v_userid">
-                                            <a href="/longArticle/getVRobot" class="fancybox fancybox.iframe btn btn-primary">选择大V机器人</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                    {{--<tr class="success">--}}
+                        {{--<th align="right" width="20%" class="text-center">话题标签<span class="text-red">*</span>:</th>--}}
+                        {{--<td width="80%">--}}
+                            {{--@foreach($opTags as $tag)--}}
+                                {{--<input type="checkbox" name="tag[]" value="{{$tag['id']}}"  />{{$tag['tag_content']}}--}}
+                            {{--@endforeach--}}
+                        {{--</td>--}}
+                    {{--</tr>--}}
+                    {{--<tr class="success">--}}
+                        {{--<th align="right" width="20%" class="text-center">品牌车系车型:</th>--}}
+                        {{--<td width="80%">--}}
+                            {{--<select style="width: 150px;" name="brandId" class="select2" id="brandId">--}}
+                                {{--<option value="">请选择品牌</option>--}}
+                                {{--@foreach($brandList as $val)--}}
+                                    {{--<option value="{{$val['brandid']}}">{{$val['brandname']}}</option>--}}
+                                {{--@endforeach--}}
+                            {{--</select>--}}
+                            {{--<select style="width: 150px;" name="seriesId" class="select2" id="seriesId">--}}
+                                {{--<option value="">请选择车系</option>--}}
+                            {{--</select>--}}
+                            {{--<select style="width: 300px;" name="modeId" class="select2" id="modeId">--}}
+                                {{--<option value="">请选择车型</option>--}}
+                            {{--</select>--}}
+                        {{--</td>--}}
+                    {{--</tr>--}}
+                    {{--<tr class="success">--}}
+                        {{--<th align="right" width="20%" class="text-center">请选择机器人性别<span class="text-red">*</span>:</th>--}}
+                        {{--<td width="80%">--}}
+                            {{--<div class="form-group">--}}
+                                {{--<div class="col-sm-10">--}}
+                                    {{--<div>--}}
+                                        {{--<div style="float: left;">--}}
+                                            {{--<label>选择机器人种类：</label>--}}
+                                            {{--<input type="hidden" class="form-control" id="user_type" name='user_type' value="1">--}}
+                                            {{--<button type="button" class="btn btn-primary category">普通</button>--}}
+                                            {{--<button type="button" class="btn category">大V机器人</button>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="hr-line-dashed"  ></div>--}}
+                            {{--<div class="form-group profile">--}}
+                                {{--<div class="col-sm-10">--}}
+                                    {{--<div>--}}
+                                        {{--<div style="float: left;">--}}
+                                            {{--<input type="radio" name="gender" value="1" checked data-num="{{$robotNum['male']}}" >&nbsp;男（共{{$robotNum['male']}}人）--}}
+                                            {{--<input type="radio" name="gender" value="2" data-num="{{$robotNum['female']}}">&nbsp;女（共{{$robotNum['female']}}人）--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="form-group profile" style="display:none">--}}
+                                {{--<div class="col-sm-10">--}}
+                                    {{--<div>--}}
+                                        {{--<div style="float: left;">--}}
+                                            {{--<input type="hidden" value="" name="v_userid" id="v_userid">--}}
+                                            {{--<a href="/longArticle/getVRobot" class="fancybox fancybox.iframe btn btn-primary">选择大V机器人</a>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</td>--}}
+                    {{--</tr>--}}
                 </table>
             </div>
 
@@ -145,7 +145,7 @@
                     <option value="">请选择类型</option>
                     <option value="1">标题</option>
                     <option value="2">图片</option>
-                    <option value="3">正文</option>
+                    <option value="3">文字</option>
                 </select>
                 </td>
                 <td>&nbsp;</td>
@@ -172,7 +172,7 @@
                 var formData = new FormData($('#dataForm')[0]);
                 $.ajax({
                     type : 'post',
-                    url : '/longArticle/addLongArticle',
+                    url : '/article/addCheck',
                     data : formData,
                     dataType :'json',
                     processData : false,
@@ -229,7 +229,12 @@
                 if(val == 1 || val == 3){
                     $(this).parent().next().html('内容:<textarea name="content[]" class="form-control" ></textarea> <input type="file" name="content_pic[]" class="hidden" />');
                 }else if(val == 2){
-                    $(this).parent().next().html('上传:<input type="file" name="content_pic[]" /> <input type="text" name="content[]" class="form-control hidden" />');
+                    $(this).parent().next().html(
+                            '<img src="" width="100px" id="file_src" form="form1">' +
+                            '<input type="hidden" name="avatar" id="file_name" value="" form="form1"/><br />' +
+                            '<input type="button" value="上传头像" style="width: 100px;" onclick="auto_upload_file('/show/uploadImg')">' +
+                        '<input type="text" name="content[]" class="form-control hidden" />'
+                    );
                 }
             });
             //机器人选择

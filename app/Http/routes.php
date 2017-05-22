@@ -43,7 +43,9 @@ Route::group([
     Route::match(['get', 'post'],'/delete', 'ArticleDelete@index');
     Route::match(['get', 'post'],'/audit', 'ArticleAudit@index');
     Route::match(['get', 'post'],'/add', 'ArticleAdd@index');
+    Route::match(['get', 'post'],'/addCheck', 'ArticleAddCheck@index');
     Route::match(['get', 'post'],'/edit', 'ArticleEdit@index');
+    Route::match(['get', 'post'],'/editCheck', 'ArticleEditCheck@index');
 });
 
 

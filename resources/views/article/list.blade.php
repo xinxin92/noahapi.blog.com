@@ -46,7 +46,7 @@
                                         </div>
 
                                         <button type="submit" class="btn btn-danger">查询</button>
-                                        <a type="button" href="/longArticle/addLongArticle" class="fancybox fancybox.iframe btn btn-success">新增文章</a>
+                                        <a type="button" href="/article/add" class="fancybox fancybox.iframe btn btn-success">新增文章</a>
                                     </form>
                                 </div>
                                 <!-- /.box -->

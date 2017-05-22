@@ -10,7 +10,7 @@ class TestAlipay extends TestBase
     //支付
     public function pay()
     {
-        $orderNumber = Common::createOrderNumber();
+        $orderNumber = Common::getUniqueValue();
         $AliPayLib = new AliPay();
         $payResult = $AliPayLib->fundTransToAccount($orderNumber,'wbumbm2382@sandbox.com',1.5,'测试','沙箱环境','测试备注');
         return $payResult;
