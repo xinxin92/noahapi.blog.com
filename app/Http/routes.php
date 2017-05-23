@@ -18,8 +18,18 @@ Route::group([
     Route::match(['get', 'post'],'/alipay/query', 'TestAlipay@query');
     Route::match(['get', 'post'],'/excel/export', 'TestExcel@export');
     Route::match(['get', 'post'],'/excel/import', 'TestExcel@import');
+    Route::match(['get', 'post'],'/view', 'TestView@index');
 //    Route::post('/db', 'TestDb@index');
 //    Route::match(['get','post'],'/db', 'TestDb@index');
+});
+
+//公共方法
+Route::group([
+    'prefix' => 'common',
+    'namespace' => 'Common',
+], function () {
+    //上传文件
+    Route::match(['get', 'post'],'/uploadImg', 'CommonUploadImg@index');
 });
 
 //基础模块

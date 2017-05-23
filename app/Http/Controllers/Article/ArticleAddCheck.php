@@ -2,43 +2,68 @@
 //文章-新增提交
 namespace App\Http\Controllers\Article;
 
+use App\Library\Common;
+
 class ArticleAddCheck extends ArticleBase
 {
     public function index()
     {
-        //构造文章内容
-        $articleContent = [];
-        $contentType = $this->request['contentType'];
-        $content = $this->request['content'];
-        $contentPicUrl = $this->request['content_pic'];
-        $index = 0;
-        foreach ($contentType as $contentTypeItem) {
-            $articleContentOne = [
-                'type' => $contentTypeItem,
-                'rank' => $index,
-            ];
-            if ($contentTypeItem == 1 or $contentTypeItem == 3) {
-                $articleContentOne['content'] = $content[$index];
-            } elseif ($contentTypeItem == 2) {
-                $articleContentOne['pic_url'] = $contentPicUrl[$index];
-            }
-            $articleContent[] = $articleContentOne;
-            $index++;
-        }
-        return $articleContent;
-
         //参数校验及获取
-//        $resCheckParams = $this->checkParams($this->request);
-//        if ($resCheckParams['code'] < 0) {
-//            return $resCheckParams;
-//        }
-        $title = trim($this->request['title']);
-        $introduction = trim($this->request['introduction']);
-        $pic_url = trim($this->request['pic_url']);
-        $content = $this->request['content'];
-//        return $_FILES['content_pic'];
-        return $this->request['contentType'];
-        return $this->request['content'];
+        $resCheckParams = $this->checkParams($this->request);
+        if ($resCheckParams['code'] < 0) {
+            return $resCheckParams;
+        }
+        $article = [
+            'title' => trim($this->request['title']),
+            'introduction' => trim($this->request['introduction']),
+            'pic_url' => trim($this->request['pic_url']),
+        ];
+        //构造文章内容并校验
+        $content = [];
+        $index = 0;
+        $has_real_content = 0;
+        try{
+            $contentType = $this->request['contentType'];
+            $contentText = $this->request['content_text'];
+            $contentPic = $this->request['content_pic'];
+            foreach ($contentType as $contentTypeItem) {
+                $contentItem = [];
+                $type = intval($contentTypeItem);
+                if ($type == 1 or $type == 3) {
+                    $contentText = Common::delStrBothBlank($contentText[$index]);
+                    $contentItem = [
+                        'type' => $type,
+                        'rank' => $index,
+                        'content' => $contentText,
+                    ];
+                    if ($contentText) {
+                        $has_real_content = 1;
+                    }
+                } elseif ($type == 2) {
+                    if ($contentPic[$index]) {
+                        $contentItem = [
+                            'type' => $type,
+                            'rank' => $index,
+                            'pic_url' => $contentPic[$index],
+                        ];
+                        $has_real_content = 1;
+                    }
+                }
+                if ($contentItem) {
+                    $content[] = $contentItem;
+                    $index++;
+                }
+            }
+        } catch (\Exception $e) {
+            return ['code'=>-2,'msg'=>'缺少文章内容或者文章内容不完整','exception_msg'=>$e->getMessage(),'exception_line'=>$e->getLine()];
+        }
+        if (!$has_real_content) {
+            return ['code'=>-2,'msg'=>'缺少文章内容或者文章内容不完整'];
+        }
+
+
+        return ['article'=>$article,'content'=>$content];
+
 
 
         //开启事务，进行新增
@@ -66,9 +91,6 @@ class ArticleAddCheck extends ArticleBase
         }
         if (!isset($request['pic_url']) || !trim($request['pic_url'])) {
             return ['code'=>-1,'msg'=>'没有获取到有效的pic_url'];
-        }
-        if (!isset($request['content'])) {
-            return ['code'=>-1,'msg'=>'没有获取到有效的content'];
         }
         return ['code'=>1,'msg'=>'校验成功'];
     }

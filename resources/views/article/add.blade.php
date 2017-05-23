@@ -12,20 +12,24 @@
             <div class="box-body table-responsive">
                 <table class="table table-hover table-bordered table-striped">
                     <tr class="success">
-                        <th align="right" width="20%" class="text-center">主标题<span class="text-red">*</span>:</th>
+                        <th align="right" width="20%" class="text-center">标题<span class="text-red">*</span>:</th>
                         <td width="80%"><input type="text" name="title" class="form-control" /></td>
                     </tr>
+                    {{--<tr class="success">--}}
+                        {{--<th align="right" width="20%" class="text-center">副标题:</th>--}}
+                        {{--<td width="80%"><input type="text" name="subtitle" class="form-control" /></td>--}}
+                    {{--</tr>--}}
                     <tr class="success">
-                        <th align="right" width="20%" class="text-center">副标题:</th>
-                        <td width="80%"><input type="text" name="subtitle" class="form-control" /></td>
-                    </tr>
-                    <tr class="success">
-                        <th align="right" width="20%" class="text-center">引言:</th>
+                        <th align="right" width="20%" class="text-center">简介:</th>
                         <td width="80%"><textarea name="introduction" class="form-control" ></textarea></td>
                     </tr>
                     <tr class="success">
-                        <th align="right" width="20%" class="text-center">上传封面<span class="text-red">*</span>:</th>
-                        <td width="80%"><input type="file" name="article_pic" /></td>
+                        <th align="right" width="20%" class="text-center">封面<span class="text-red">*</span>:</th>
+                        <td width="80%">
+                            <img src="" width="100px" id="file_src_cover" />
+                            <input type="hidden" name="pic_url" id="file_name_cover" /><br />
+                            <input type="button" value="上传封面" style="width: 100px;" onclick="auto_upload_file('/common/uploadImg','file_src_cover','file_name_cover')" />
+                        </td>
                     </tr>
                 </table>
 
@@ -36,7 +40,7 @@
             </div>
 
             <div class="box-body table-responsive sortable" id="contentDiv">
-                <table class="table table-hover table-bordered table-striped">
+                <table class="table table-hover table-bordered table-striped" id="content1">
                     <tr class="success">
                         <th align="right" class="text-center" rowspan="3" width="20%">
                             <button type="button" class="btn btn-xs btn-danger deleteContentBtn">删除内容</button>
@@ -48,7 +52,7 @@
                                 <option value="">请选择类型</option>
                                 <option value="1">标题</option>
                                 <option value="2">图片</option>
-                                <option value="3">文字</option>
+                                <option value="3">文本</option>
                             </select>
                         </td>
                         <td>&nbsp;</td>
@@ -145,7 +149,7 @@
                     <option value="">请选择类型</option>
                     <option value="1">标题</option>
                     <option value="2">图片</option>
-                    <option value="3">文字</option>
+                    <option value="3">文本</option>
                 </select>
                 </td>
                 <td>&nbsp;</td>
@@ -158,8 +162,10 @@
 @endsection
 @section('pagejs')
     <script type="text/javascript" src="/assets/plugins/select2/select2.full.min.js"></script>
+    <script type="text/javascript" src="/assets/js/common/auto_upload_file.js"></script>
     <script type="text/javascript">
         $(function(){
+            var index = 1;
             $(".select2").select2();
             toastr.options = {
                 "positionClass": "toast-top-center",
@@ -218,6 +224,8 @@
             //增加内容
             $('#addContentBtn').click(function(){
                 var table = $('#contentTableHide').clone().removeClass('hidden').removeAttr('id');
+                index++;
+                table.attr("id","content" + index);
                 $('#contentDiv').append(table);
             });
             //删除内容
@@ -225,15 +233,18 @@
                 $(this).parents('table').remove();
             });
             $(document).on('change','.contentType',function(){
+                var contentIndex = $(this).parents("table").attr("id");
+                var file_src = 'file_src_' + contentIndex;
+                var file_name = 'file_name_' + contentIndex;
                 var val = $(this).val();
                 if(val == 1 || val == 3){
-                    $(this).parent().next().html('内容:<textarea name="content[]" class="form-control" ></textarea> <input type="file" name="content_pic[]" class="hidden" />');
+                    $(this).parent().next().html('内容:<textarea name="content_text[]" class="form-control" ></textarea> <input type="text" name="content_pic[]" class="hidden" />');
                 }else if(val == 2){
                     $(this).parent().next().html(
-                            '<img src="" width="100px" id="file_src" form="form1">' +
-                            '<input type="hidden" name="avatar" id="file_name" value="" form="form1"/><br />' +
-                            '<input type="button" value="上传头像" style="width: 100px;" onclick="auto_upload_file('/show/uploadImg')">' +
-                        '<input type="text" name="content[]" class="form-control hidden" />'
+                        '<img src="" width="100px" id="'+ file_src +'" />' +
+                        '<input type="hidden" name="content_pic[]" id="'+ file_name +'" /><br />' +
+                        '<input type="button" value="上传图片" style="width: 100px;" onclick="auto_upload_file(\'/common/uploadImg\',\'' + file_src + '\',\'' + file_name + '\')">' +
+                        '<input type="text" name="content_text[]" class="form-control hidden" />'
                     );
                 }
             });
