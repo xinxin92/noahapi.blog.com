@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Article;
 
 use App\Library\Common;
+use App\Models\Article\Article;
+use App\Models\Article\ArticleContent;
+use Illuminate\Support\Facades\DB;
 
 class ArticleAddCheck extends ArticleBase
 {
@@ -13,10 +16,13 @@ class ArticleAddCheck extends ArticleBase
         if ($resCheckParams['code'] < 0) {
             return $resCheckParams;
         }
+        $timeNow = date('Y-m-d H:i:s');
         $article = [
             'title' => trim($this->request['title']),
             'introduction' => trim($this->request['introduction']),
             'pic_url' => trim($this->request['pic_url']),
+            'created_at' => $timeNow,
+            'updated_at' => $timeNow,
         ];
         //构造文章内容并校验
         $content = [];
@@ -30,13 +36,14 @@ class ArticleAddCheck extends ArticleBase
                 $contentItem = [];
                 $type = intval($contentTypeItem);
                 if ($type == 1 or $type == 3) {
-                    $contentText = Common::delStrBothBlank($contentText[$index]);
+                    $contentTextItem = Common::delStrBothBlank($contentText[$index]);
                     $contentItem = [
                         'type' => $type,
                         'rank' => $index,
-                        'content' => $contentText,
+                        'pic_url' => '',
+                        'content' => $contentTextItem,
                     ];
-                    if ($contentText) {
+                    if ($contentTextItem) {
                         $has_real_content = 1;
                     }
                 } elseif ($type == 2) {
@@ -45,6 +52,7 @@ class ArticleAddCheck extends ArticleBase
                             'type' => $type,
                             'rank' => $index,
                             'pic_url' => $contentPic[$index],
+                            'content' => '',
                         ];
                         $has_real_content = 1;
                     }
@@ -61,24 +69,24 @@ class ArticleAddCheck extends ArticleBase
             return ['code'=>-2,'msg'=>'缺少文章内容或者文章内容不完整'];
         }
 
-
-        return ['article'=>$article,'content'=>$content];
-
-
-
         //开启事务，进行新增
-//        DB::beginTransaction();
-//        try{
-//            $this->OpOgcBountyPayMod->updateBy(['pay_status'=>5,'pay_message'=>'发放异常,程序运行中断或者更新失败','assign_time'=>$assignTime,'out_biz_no'=>$orderNumber,'last_op_id'=>$this->user_id],['id'=>$id]);
-//            $this->OpOgcBountyMod->updateBy(['audit_status'=>8,'pay_message'=>'发放异常,程序运行中断或者更新失败'],['pay_id'=>$id]);
-//            $logId = $this->OpOgcBountyLogMod->insertGetId($log);
-//            DB::commit();
-//        } catch (\Exception $e) {
-//            DB::rollback();
-//            return ['code'=>-4,'msg'=>'程序运行异常，未进行打款，请重试','exception'=>$e->getMessage()];
-//        }
-
-
+        $ArticleMod = new Article();
+        $ArticleContentMod = new ArticleContent();
+        DB::beginTransaction();
+        try{
+            $id = $ArticleMod->insertGetId($article);
+            foreach ($content as &$contentOne) {
+                $contentOne['master_id'] = $id;
+                $contentOne['created_at'] = $timeNow;
+                $contentOne['updated_at'] = $timeNow;
+            }
+            $ArticleContentMod->insert($content);
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollback();
+            return ['code'=>-3,'msg'=>'新增意外失败，请重试','exception'=>$e->getMessage()];
+        }
+        return ['code'=>1,'msg'=>'新增成功'];
     }
 
     //参数校验
