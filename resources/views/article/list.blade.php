@@ -44,6 +44,15 @@
                                             <label for="end_time">至</label>
                                             <input type="text" class="form-control" id="end_time" name="end_time" value="{{$params['end_time'] or ''}}" placeholder="">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="status">状态:</label>
+                                            <select id="status"  name="status" class="form-control">
+                                                <option value="0">全部</option>
+                                                <option value="1" @if(isset($params['status'])&&$params['status']==1) selected @endif>未审核</option>
+                                                <option value="2" @if(isset($params['status'])&&$params['status']==2) selected @endif>审核不通过</option>
+                                                <option value="3" @if(isset($params['status'])&&$params['status']==3) selected @endif>审核通过</option>
+                                            </select>
+                                        </div>
 
                                         <button type="submit" class="btn btn-danger">查询</button>
                                         <a type="button" href="/article/add" class="fancybox fancybox.iframe btn btn-success">新增文章</a>

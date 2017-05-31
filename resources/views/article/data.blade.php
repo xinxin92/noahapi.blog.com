@@ -13,6 +13,7 @@
                 <table class="table table-hover table-bordered table-striped">
                     <tr class="success">
                         <input type="text" id="type" class="hidden" value="{{$type}}" />
+                        <input type="text" name="id" class="hidden" value="@if($type == 'edit'){{$articleInfo['id']}}@endif" />
                         <th align="right" width="20%" class="text-center">标题<span class="text-red">*</span>:</th>
                         <td width="80%"><input type="text" name="title" class="form-control" value="@if($type == 'edit'){{$articleInfo['title']}}@endif" /></td>
                     </tr>
@@ -27,8 +28,8 @@
                     <tr class="success">
                         <th align="right" width="20%" class="text-center">封面<span class="text-red">*</span>:</th>
                         <td width="80%">
-                            <img src="@if($type == 'edit'){{$articleInfo['pic_url']}}@endif" width="100px" id="file_src_cover" />
-                            <input type="hidden" name="pic_url" id="file_name_cover" /><br />
+                            <img src="@if($type == 'edit'){{$articleInfo['pic_url_show']}}@endif" width="100px" id="file_src_cover" />
+                            <input type="hidden" name="pic_url" id="file_name_cover" value="@if($type == 'edit'){{$articleInfo['pic_url']}}@endif" /><br />
                             <input type="button" value="上传封面" style="width: 100px;" onclick="auto_upload_file('/common/uploadImg','file_src_cover','file_name_cover')" />
                         </td>
                     </tr>
@@ -63,8 +64,8 @@
                                         内容:<textarea name="content_text[]" class="form-control" >{{$content['content']}}</textarea>
                                         <input type="text" name="content_pic[]" class="hidden" />
                                     @else
-                                        <img src="{{$content['pic_url']}}" width="100px" id="file_src_content{{$key}}" />
-                                        <input type="hidden" name="content_pic[]" id="file_name_content{{$key}}" /><br />
+                                        <img src="{{$content['pic_url_show']}}" width="100px" id="file_src_content{{$key}}" />
+                                        <input type="hidden" name="content_pic[]" id="file_name_content{{$key}}" value="{{$content['pic_url']}}" /><br />
                                         <input type="button" value="上传图片" style="width: 100px;" onclick="auto_upload_file('/common/uploadImg','file_src_content{{$key}}','file_name_content{{$key}}')" />
                                         <input type="text" name="content_text[]" class="form-control hidden" />
                                     @endif

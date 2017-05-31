@@ -25,7 +25,7 @@ class ArticleList extends ArticleBase
         $where = [];
         $params = [];
         $orderBy = [];
-        //结算周期
+        //发布时间
         if (isset($request['start_time']) && trim($request['start_time'])) {
             $start_time = trim($request['start_time']);
             $params['start_time'] = $start_time;
@@ -36,13 +36,13 @@ class ArticleList extends ArticleBase
             $params['end_time'] = $end_time;
             $where['created_at <='] = $end_time.' 23:59:59';
         }
-        //作者ID
+        //文章ID
         if (isset($request['id']) && intval($request['id'])) {
             $id = intval($request['id']);
             $params['id'] = $id;
             $where['id'] = $id;
         }
-        //作者昵称
+        //文章标题
         if (isset($request['title']) && trim($request['title'])) {
             $title = trim($request['title']);
             $params['title'] = $title;
