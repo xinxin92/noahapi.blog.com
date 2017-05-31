@@ -92,13 +92,13 @@ class ArticleAddCheck extends ArticleBase
     //参数校验
     private function checkParams($request = []) {
         if (!isset($request['title']) || !trim($request['title'])) {
-            return ['code'=>-1,'msg'=>'没有获取到有效的title'];
+            return ['code'=>-1,'msg'=>'请输入标题'];
         }
         if (!isset($request['introduction']) || !trim($request['introduction'])) {
-            return ['code'=>-1,'msg'=>'没有获取到有效的introduction'];
+            return ['code'=>-1,'msg'=>'请输入简介'];
         }
         if (!isset($request['pic_url']) || !trim($request['pic_url'])) {
-            return ['code'=>-1,'msg'=>'没有获取到有效的pic_url'];
+            return ['code'=>-1,'msg'=>'请上传封面'];
         }
         return ['code'=>1,'msg'=>'校验成功'];
     }

@@ -1,13 +1,15 @@
 <?php
-//文章-新增
+//文章-新增展示
 namespace App\Http\Controllers\Article;
 
 class ArticleAdd extends ArticleBase
 {
     public function index()
     {
-        $data = [];
-        return view('article.add', $data);
+        $data = [
+            'type' => 'add',
+        ];
+        return view('article.data', $data);
     }
 
 }

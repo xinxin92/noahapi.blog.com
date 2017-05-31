@@ -12,21 +12,22 @@
             <div class="box-body table-responsive">
                 <table class="table table-hover table-bordered table-striped">
                     <tr class="success">
+                        <input type="text" id="type" class="hidden" value="{{$type}}" />
                         <th align="right" width="20%" class="text-center">标题<span class="text-red">*</span>:</th>
-                        <td width="80%"><input type="text" name="title" class="form-control" /></td>
+                        <td width="80%"><input type="text" name="title" class="form-control" value="@if($type == 'edit'){{$articleInfo['title']}}@endif" /></td>
                     </tr>
                     {{--<tr class="success">--}}
                         {{--<th align="right" width="20%" class="text-center">副标题:</th>--}}
                         {{--<td width="80%"><input type="text" name="subtitle" class="form-control" /></td>--}}
                     {{--</tr>--}}
                     <tr class="success">
-                        <th align="right" width="20%" class="text-center">简介:</th>
-                        <td width="80%"><textarea name="introduction" class="form-control" ></textarea></td>
+                        <th align="right" width="20%" class="text-center">简介<span class="text-red">*</span>:</th>
+                        <td width="80%"><textarea name="introduction" class="form-control" >@if($type == 'edit'){{$articleInfo['introduction']}}@endif</textarea></td>
                     </tr>
                     <tr class="success">
                         <th align="right" width="20%" class="text-center">封面<span class="text-red">*</span>:</th>
                         <td width="80%">
-                            <img src="" width="100px" id="file_src_cover" />
+                            <img src="@if($type == 'edit'){{$articleInfo['pic_url']}}@endif" width="100px" id="file_src_cover" />
                             <input type="hidden" name="pic_url" id="file_name_cover" /><br />
                             <input type="button" value="上传封面" style="width: 100px;" onclick="auto_upload_file('/common/uploadImg','file_src_cover','file_name_cover')" />
                         </td>
@@ -40,24 +41,57 @@
             </div>
 
             <div class="box-body table-responsive sortable" id="contentDiv">
-                <table class="table table-hover table-bordered table-striped" id="content1">
-                    <tr class="success">
-                        <th align="right" class="text-center" rowspan="3" width="20%">
-                            <button type="button" class="btn btn-xs btn-danger deleteContentBtn">删除内容</button>
-                        </th>
-                    </tr>
-                    <tr class="success">
-                        <td class="text-center" width="20%">类型:
-                            <select name="contentType[]" class="form-control contentType">
-                                <option value="">请选择类型</option>
-                                <option value="1">标题</option>
-                                <option value="2">图片</option>
-                                <option value="3">文本</option>
-                            </select>
-                        </td>
-                        <td>&nbsp;</td>
-                    </tr>
-                </table>
+                @if($type == 'edit')
+                    @foreach($articleInfo['content'] as $key => $content)
+                        <table class="table table-hover table-bordered table-striped" id="content{{++$key}}">
+                            <tr class="success">
+                                <th width="10%" align="right" class="text-center" rowspan="3">
+                                    <input type="button" class="btn btn-xs btn-danger deleteContentBtn" value="删除内容">
+                                </th>
+                            </tr>
+                            <tr class="success">
+                                <td class="text-center" width="20%">类型:
+                                    <select name="contentType[]" class="form-control contentType">
+                                        <option value="">请选择类型</option>
+                                        <option value="1" @if($content['type'] == '1') selected @endif>标题</option>
+                                        <option value="2" @if($content['type'] == '2') selected @endif>图片</option>
+                                        <option value="3" @if($content['type'] == '3') selected @endif>文本</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    @if($content['type'] == '1' || $content['type'] == '3')
+                                        内容:<textarea name="content_text[]" class="form-control" >{{$content['content']}}</textarea>
+                                        <input type="text" name="content_pic[]" class="hidden" />
+                                    @else
+                                        <img src="{{$content['pic_url']}}" width="100px" id="file_src_content{{$key}}" />
+                                        <input type="hidden" name="content_pic[]" id="file_name_content{{$key}}" /><br />
+                                        <input type="button" value="上传图片" style="width: 100px;" onclick="auto_upload_file('/common/uploadImg','file_src_content{{$key}}','file_name_content{{$key}}')" />
+                                        <input type="text" name="content_text[]" class="form-control hidden" />
+                                    @endif
+                                </td>
+                            </tr>
+                        </table>
+                    @endforeach
+                @else
+                    <table class="table table-hover table-bordered table-striped" id="content1">
+                        <tr class="success">
+                            <th width="10%" align="right" class="text-center" rowspan="3">
+                                <input type="button" class="btn btn-xs btn-danger deleteContentBtn" value="删除内容">
+                            </th>
+                        </tr>
+                        <tr class="success">
+                            <td class="text-center" width="20%">类型:
+                                <select name="contentType[]" class="form-control contentType">
+                                    <option value="">请选择类型</option>
+                                    <option value="1">标题</option>
+                                    <option value="2">图片</option>
+                                    <option value="3">文本</option>
+                                </select>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                @endif
             </div>
 
             <div class="box-body table-responsive">
@@ -131,7 +165,7 @@
         </div>
 
         <div id="btnDiv" class="box-footer clearfix text-center">
-            <input type="button" class="btn btn-success hidden" id="viewBtn" value="生成H5预览">
+            {{--<input type="button" class="btn btn-success hidden" id="viewBtn" value="生成H5预览">--}}
             <input type="button" class="btn btn-danger" id="pubBtn" value="保存发布">
         </div>
 
@@ -139,8 +173,8 @@
 
         <table class="table table-hover table-bordered table-striped hidden" id="contentTableHide">
             <tr class="success">
-                <th align="right" class="text-center" rowspan="3" width="20%">
-                    <button type="button" class="btn btn-xs btn-danger deleteContentBtn">删除内容</button>
+                <th width="10%" align="right" class="text-center" rowspan="3">
+                    <input type="button" class="btn btn-xs btn-danger deleteContentBtn" value="删除内容">
                 </th>
             </tr>
             <tr class="success">
@@ -165,7 +199,12 @@
     <script type="text/javascript" src="/assets/js/common/auto_upload_file.js"></script>
     <script type="text/javascript">
         $(function(){
-            var index = 1;
+            var index = 10000;
+            var requestUrl = '/article/addCheck';
+            var type = $('#type').val();
+            if(type == 'edit') {
+                requestUrl = '/article/editCheck';
+            }
             $(".select2").select2();
             toastr.options = {
                 "positionClass": "toast-top-center",
@@ -178,7 +217,7 @@
                 var formData = new FormData($('#dataForm')[0]);
                 $.ajax({
                     type : 'post',
-                    url : '/article/addCheck',
+                    url : requestUrl,
                     data : formData,
                     dataType :'json',
                     processData : false,
