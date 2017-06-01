@@ -20,6 +20,7 @@ class ArticleAddCheck extends ArticleBase
         $article = [
             'title' => trim($this->request['title']),
             'introduction' => trim($this->request['introduction']),
+            'type' => intval($this->request['type']),
             'pic_url' => trim($this->request['pic_url']),
             'created_at' => $timeNow,
             'updated_at' => $timeNow,
@@ -92,10 +93,13 @@ class ArticleAddCheck extends ArticleBase
     //参数校验
     private function checkParams($request = []) {
         if (!isset($request['title']) || !trim($request['title'])) {
-            return ['code'=>-1,'msg'=>'请输入标题'];
+            return ['code'=>-1,'msg'=>'请输入文章标题'];
         }
         if (!isset($request['introduction']) || !trim($request['introduction'])) {
-            return ['code'=>-1,'msg'=>'请输入简介'];
+            return ['code'=>-1,'msg'=>'请输入文章简介'];
+        }
+        if (!isset($request['type']) || !intval($request['type'])) {
+            return ['code'=>-1,'msg'=>'请选择文章类型'];
         }
         if (!isset($request['pic_url']) || !trim($request['pic_url'])) {
             return ['code'=>-1,'msg'=>'请上传封面'];

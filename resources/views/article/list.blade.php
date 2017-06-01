@@ -11,7 +11,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
-            <li><a href="#">文章管理</a></li>
+            <li><a href="#">内容管理</a></li>
             <li class="active">文章列表</li>
         </ol>
     </section>
@@ -45,6 +45,15 @@
                                             <input type="text" class="form-control" id="end_time" name="end_time" value="{{$params['end_time'] or ''}}" placeholder="">
                                         </div>
                                         <div class="form-group">
+                                            <label for="type">类型:</label>
+                                            <select id="type"  name="type" class="form-control">
+                                                <option value="0">全部</option>
+                                                <option value="1" @if(isset($params['type'])&&$params['type']==1) selected @endif>专业博文</option>
+                                                <option value="2" @if(isset($params['type'])&&$params['type']==2) selected @endif>外部摘录</option>
+                                                <option value="3" @if(isset($params['type'])&&$params['type']==3) selected @endif>心得随笔</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="status">状态:</label>
                                             <select id="status"  name="status" class="form-control">
                                                 <option value="0">全部</option>
@@ -72,33 +81,32 @@
                                         <table class="table table-hover table-bordered table-striped">
                                             <tr class="text-nowrap">
                                                 <th> ID </th>
-                                                <th> 标题 </th>
-                                                <th> 简介 </th>
+                                                <th> 封面 </th>
+                                                <th> 文章标题 </th>
+                                                <th> 文章简介 </th>
                                                 <th> 发布时间 </th>
                                                 <th> 更新时间 </th>
+                                                <th> 文章类型 </th>
                                                 <th> 状态 </th>
                                                 <th> 操作 </th>
                                             </tr>
                                             @foreach ($lists as $article)
                                                 <tr class="text-nowrap">
                                                     <td>{{$article->id}}</td>
-                                                    <td title="{{$article->title}}">{{mb_substr($article->title,0,30)}}</td>
-                                                    <td>{{$article->introduction}}</td>
+                                                    <td><img src="{{$article->pic_url_show}}" width="40"></td>
+                                                    <td title="{{$article->title}}">{{$article->title_short}}</td>
+                                                    <td title="{{$article->introduction}}">{{$article->introduction_short}}</td>
                                                     <td>{{$article->created_at}}</td>
                                                     <td>{{$article->updated_at}}</td>
-                                                    <td>
-                                                        @if($article->status_show == 1) 未审核
-                                                        @elseif ($article->status_show == 2) 审核不通过
-                                                        @elseif ($article->status_show == 3) 审核通过
-                                                        @endif
-                                                    </td>
+                                                    <td>{{$article->type_show}}</td>
+                                                    <td>{{$article->status_show}}</td>
                                                     <td>
                                                         <a href="/article/edit?id={{$article->id}}" class="fancybox fancybox.iframe btn btn-xs btn-success">编辑</a>
                                                         <a href="/article/delete?id={{$article->id}}" class="btn btn-xs btn-danger deleteArticle">删除</a>
-                                                        @if($article->status_show == 1 || $article->status_show == 2)
+                                                        @if($article->status == 1 || $article->status == 2)
                                                             <a href="/article/audit?id={{$article->id}}&opt=1" class="btn btn-xs btn-success auditArticle">通过</a>
                                                         @endif
-                                                        @if($article->status_show == 1 || $article->status_show == 3)
+                                                        @if($article->status == 1 || $article->status == 3)
                                                             <a href="/article/audit?id={{$article->id}}&opt=2" class="btn btn-xs btn-success auditArticle">不通过</a>
                                                         @endif
 

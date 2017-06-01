@@ -1,5 +1,6 @@
 <?php
 //上传配置
 return [
-    'uploadDir' => '/upload/',
+    'fileDir' => $_SERVER['DOCUMENT_ROOT'].'/upload/',
+    'fileHost' => '/upload/',
 ];

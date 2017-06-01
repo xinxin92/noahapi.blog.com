@@ -12,24 +12,35 @@
             <div class="box-body table-responsive">
                 <table class="table table-hover table-bordered table-striped">
                     <tr class="success">
-                        <input type="text" id="type" class="hidden" value="{{$type}}" />
-                        <input type="text" name="id" class="hidden" value="@if($type == 'edit'){{$articleInfo['id']}}@endif" />
-                        <th align="right" width="20%" class="text-center">标题<span class="text-red">*</span>:</th>
-                        <td width="80%"><input type="text" name="title" class="form-control" value="@if($type == 'edit'){{$articleInfo['title']}}@endif" /></td>
+                        <input type="text" id="opt" class="hidden" value="{{$opt}}" />
+                        <input type="text" name="id" class="hidden" value="@if($opt == 'edit'){{$articleInfo['id']}}@endif" />
+                        <th align="right" width="20%" class="text-center">文章标题<span class="text-red">*</span>:</th>
+                        <td width="80%"><input type="text" name="title" class="form-control" value="@if($opt == 'edit'){{$articleInfo['title']}}@endif" /></td>
                     </tr>
                     {{--<tr class="success">--}}
                         {{--<th align="right" width="20%" class="text-center">副标题:</th>--}}
                         {{--<td width="80%"><input type="text" name="subtitle" class="form-control" /></td>--}}
                     {{--</tr>--}}
                     <tr class="success">
-                        <th align="right" width="20%" class="text-center">简介<span class="text-red">*</span>:</th>
-                        <td width="80%"><textarea name="introduction" class="form-control" >@if($type == 'edit'){{$articleInfo['introduction']}}@endif</textarea></td>
+                        <th align="right" width="20%" class="text-center">文章简介<span class="text-red">*</span>:</th>
+                        <td width="80%"><textarea name="introduction" class="form-control" >@if($opt == 'edit'){{$articleInfo['introduction']}}@endif</textarea></td>
                     </tr>
                     <tr class="success">
-                        <th align="right" width="20%" class="text-center">封面<span class="text-red">*</span>:</th>
+                        <th align="right" width="20%" class="text-center">文章类型<span class="text-red">*</span>:</th>
                         <td width="80%">
-                            <img src="@if($type == 'edit'){{$articleInfo['pic_url_show']}}@endif" width="100px" id="file_src_cover" />
-                            <input type="hidden" name="pic_url" id="file_name_cover" value="@if($type == 'edit'){{$articleInfo['pic_url']}}@endif" /><br />
+                            <select name="type" class="form-control">
+                                <option value="">请选择类型</option>
+                                <option value="1" @if($opt == 'edit' && $articleInfo['type'] == 1) selected @endif>专业博文</option>
+                                <option value="2" @if($opt == 'edit' && $articleInfo['type'] == 2) selected @endif>外部摘录</option>
+                                <option value="3" @if($opt == 'edit' && $articleInfo['type'] == 3) selected @endif>心得随笔</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="success">
+                        <th align="right" width="20%" class="text-center">文章封面<span class="text-red">*</span>:</th>
+                        <td width="80%">
+                            <img src="@if($opt == 'edit'){{$articleInfo['pic_url_show']}}@endif" width="100px" id="file_src_cover" />
+                            <input type="hidden" name="pic_url" id="file_name_cover" value="@if($opt == 'edit'){{$articleInfo['pic_url']}}@endif" /><br />
                             <input type="button" value="上传封面" style="width: 100px;" onclick="auto_upload_file('/common/uploadImg','file_src_cover','file_name_cover')" />
                         </td>
                     </tr>
@@ -42,7 +53,7 @@
             </div>
 
             <div class="box-body table-responsive sortable" id="contentDiv">
-                @if($type == 'edit')
+                @if($opt == 'edit')
                     @foreach($articleInfo['content'] as $key => $content)
                         <table class="table table-hover table-bordered table-striped" id="content{{++$key}}">
                             <tr class="success">
@@ -202,8 +213,8 @@
         $(function(){
             var index = 10000;
             var requestUrl = '/article/addCheck';
-            var type = $('#type').val();
-            if(type == 'edit') {
+            var opt = $('#opt').val();
+            if(opt == 'edit') {
                 requestUrl = '/article/editCheck';
             }
             $(".select2").select2();
@@ -231,6 +242,7 @@
                         if(response.code == 1){
                             alert(response.msg);
                             window.parent.$.fancybox.close();
+                            window.parent.location.reload();
                         }else{
                             toastr.error(response.msg);
                         }

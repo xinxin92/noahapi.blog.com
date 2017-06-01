@@ -26,10 +26,8 @@ class Upload {
         }
         
         //文件改名及移动
-        $fileDir = $_SERVER['DOCUMENT_ROOT'].'/upload/';
-        $fileHost = '/upload/';
         $new_name = Common::getUniqueValue([],false).".".$file_type;
-        $res = move_uploaded_file($file['tmp_name'], $fileDir.$new_name);
+        $res = move_uploaded_file($file['tmp_name'], config('upload.fileDir').$new_name);
         if (!$res) {
             return ['code' => -13, 'msg' => '文件保存失败，请重试'];
         }
@@ -37,7 +35,7 @@ class Upload {
         $data = [
             'code' => 1,
             'msg' => '上传成功',
-            'file_src' => $fileHost.$new_name,
+            'file_src' => config('upload.fileHost').$new_name,
             'file_name' => $new_name,
         ];
         return $data;

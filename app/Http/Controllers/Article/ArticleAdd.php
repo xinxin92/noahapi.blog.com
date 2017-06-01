@@ -7,7 +7,7 @@ class ArticleAdd extends ArticleBase
     public function index()
     {
         $data = [
-            'type' => 'add',
+            'opt' => 'add',
         ];
         return view('article.data', $data);
     }

@@ -21,6 +21,7 @@ class ArticleEditCheck extends ArticleBase
         $article = [
             'title' => trim($this->request['title']),
             'introduction' => trim($this->request['introduction']),
+            'type' => intval($this->request['type']),
             'pic_url' => trim($this->request['pic_url']),
         ];
         //构造文章内容并校验
@@ -100,6 +101,9 @@ class ArticleEditCheck extends ArticleBase
         }
         if (!isset($request['introduction']) || !trim($request['introduction'])) {
             return ['code'=>-1,'msg'=>'请输入简介'];
+        }
+        if (!isset($request['type']) || !intval($request['type'])) {
+            return ['code'=>-1,'msg'=>'请选择文章类型'];
         }
         if (!isset($request['pic_url']) || !trim($request['pic_url'])) {
             return ['code'=>-1,'msg'=>'请上传封面'];
