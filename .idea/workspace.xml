@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cfb28f9e-6a99-41c7-9156-588571ed41f8" name="默认的" comment="新增文章">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/00f25bf9773c2e7691af9c1b17f5919e.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/04b0e9f67074ad9f7ee180b5dbdc5f0d.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/066f0ca71dd1426b4e6f05bdd332a4a4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/0a86af08ac3d47268688ed802c52f6cd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/0bcaee1fef81c931b23bf5f4b534f152.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/0dd52a0ffab397d8b9cd15fc65e114d4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/139ee7bcd6812d18acc5840fbb9e3a6c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/1532816f47a92b3278bc6e6ba0179c4f.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/1ab30876bbb57c0320c011b2d1681449.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/1d9bd2720ca59df77e4e55d6461b3e16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/1f8408f8104019c64efdc5142c95bc69.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/2b1140f47d4a69ecf88c4a4e831750ef.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/332eabf2a1d84cf85b84d9ede84e9602.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/3869719c6068165192a199d784439270.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/3c2875550f525568010bb2c64361a53b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/3f3a0c25ed7ae800e6a1d775997a1355.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/41e5ec6e9119f4c89368aa297a1848a8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/46f4b2829d64d30660ee326f65aa0e65.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/476d6f99a01ab15134e2acf76e76219e.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/49400ca06487163d7c0c0bcf9322e350.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/495d9dd1e9dcb89ee0cd21117ee8ec2a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/4ca24f7cc557c02d15366c54de7dbcf2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/4fd551ca65605d424dcf32354b14bdde.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/57b4152ecf7e95caad15d38acefc44e7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/58377bcc9d796a8bca8b69fe78695b8a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/6221198b9686f06d35a959b282378410.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/6ff3218b5a09205decfb267218761cc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/706c04fbee859cc355d80af66e7513ed.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/7084eace0a1e9056e553a8e5c9c04530.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/7114d047283f64899f776a728912a239.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/76f14732f0c1825e58e2cb028c170856.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/7ab4da4e7abe644c08ead0a7e2b0e0e5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/7da148099d61fb4ee9ee07aeda4979c7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/8348f9668d4fe82938f8c40706cca713.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/86e8eda7e3fc75242911e18b001f8483.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/89f7f05a68dc44c495b458b03b99ba69.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/8fe1e480f36a154e4db8a687b1e36cc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/902b36a085f0b3e23852ffac9cb214b5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/92ba5cceb36c3828f8f30f0159224f47.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/92fe0606a5bedba0129a2f60b0261070.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/96748850eab968d089090e62304af8eb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/970d85e86db3343f913df0c585f0526e.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/9a98b2426c4c0246795d0834f1990976.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/9af84a35fab88ecaf50bd638f0dc493c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/9e29abbfc288c20f6298bd2deb70297b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/9f24ba250171a2c8b36683b23a24f038.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/9fa5b946c41f622e8ac89da36fa750b0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/a1162f253c8215b9fa7ad5df4bea38b6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/aeaa2914982d775e4712cd13bbc1590a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/ba5242759264911fd99d5279ab66f244.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/bb45a84347f92a3a9378130011c28a27.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/c18bdadd6a35ff685ef8d7df67cbcd2b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/c66ecdd00c11ec08eb5176847fbb8823.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/c6977fb916438b45139f048a64e2ddb4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/c810322a79af02742f19561600b8047b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/c82a36d811e109cba54f17a9f8c81305.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/c858ed03416b3cad792a20ad0253d5ee.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/cbfb81808beee158a59be077a6c38af2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/d4bfd8ef778a9ff50344060e493b10e4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/d4e974f6ef456e053fb2b5187f55c369.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/d548f843b1816e9d3e5e58d77ff0455e.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/d5976a09c9450dcbaa0736da8a57e562.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/dfa6eb672db372a03087566b96f5c00c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/ecfa759c43b403a9ad0808922d4127f4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/eff54a533ef3962e23dfdbbdc6ae82b9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/f02f44ceb1e88828f5d671db990594d3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/f3879f940e9fc45afb6400f3a945e0bd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/f713400aa97b3403165ec07087d52989.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/upload/feb0df3f7badfb27e2ea91aa62dad5c1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/noahapi.blog.com.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
+    <ignored path="noahapi.blog.com.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="noahapi.blog.com" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../reactDev/blog/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/assets/js/common/auto_upload_file.js" />
+        <option value="$PROJECT_DIR$/resources/views/article/add.blade.php" />
+        <option value="$PROJECT_DIR$/config/upload.php" />
+        <option value="$PROJECT_DIR$/app/Library/Upload.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Article/ArticleList.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Article/ArticleAdd.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Article/ArticleEdit.php" />
+        <option value="$PROJECT_DIR$/resources/views/article/data.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/article/list.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Article/ArticleAddCheck.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Article/ArticleEditCheck.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="添加" />
+    <OptionsSetting value="true" id="移除" />
+    <OptionsSetting value="true" id="签出" />
+    <OptionsSetting value="true" id="更新" />
+    <OptionsSetting value="true" id="状态" />
+    <OptionsSetting value="true" id="编辑" />
+    <ConfirmationsSetting value="0" id="添加" />
+    <ConfirmationsSetting value="0" id="移除" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="noahapi.blog.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="noahapi.blog.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="noahapi.blog.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfb28f9e-6a99-41c7-9156-588571ed41f8" name="默认的" comment="" />
+      <created>1495527256806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1495527256806</updated>
+      <workItem from="1495527262744" duration="10660000" />
+      <workItem from="1495788117923" duration="6593000" />
+      <workItem from="1496196637970" duration="7117000" />
+      <workItem from="1496211778352" duration="7829000" />
+      <workItem from="1496227287006" duration="1100000" />
+      <workItem from="1496282597134" duration="7579000" />
+      <workItem from="1499671135011" duration="601000" />
+      <workItem from="1499676511861" duration="1666000" />
+      <workItem from="1503295575659" duration="576000" />
+    </task>
+    <task id="LOCAL-00001" summary="新增文章">
+      <created>1495537222642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1495537222642</updated>
+    </task>
+    <task id="LOCAL-00002" summary="新增文章">
+      <created>1495794670028</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1495794670028</updated>
+    </task>
+    <task id="LOCAL-00003" summary="新增文章">
+      <created>1496216000610</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1496216000610</updated>
+    </task>
+    <task id="LOCAL-00004" summary="新增文章">
+      <created>1496228341769</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496228341769</updated>
+    </task>
+    <task id="LOCAL-00005" summary="新增文章">
+      <created>1496290508436</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1496290508436</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="43721000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24205749" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="新增文章" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增文章" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../reactDev/blog/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleEdit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="81" column="63" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/data.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4202">
+          <caret line="191" column="10" selection-start-line="191" selection-start-column="10" selection-end-line="191" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/editLongArticle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleAddCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Library/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/data.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4268">
+          <caret line="194" column="55" selection-start-line="194" selection-start-column="28" selection-end-line="194" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleAddCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Library/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/data.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4268">
+          <caret line="194" column="55" selection-start-line="194" selection-start-column="28" selection-end-line="194" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/common/auto_upload_file.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleDelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-214">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/editLongArticle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-596">
+          <caret line="127" column="31" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Library/Upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Common/CommonUploadImg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Library/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="108" column="45" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleAdd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleEdit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="88" column="57" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleAddCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="53" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleEditCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/article/data.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="28" column="78" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-772">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Article/ArticleList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../reactDev/blog/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/artisan">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../reactDev/blog/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
